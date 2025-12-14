@@ -5,6 +5,7 @@
    const triesHome = document.getElementById("triesHome")
    let valula = Math.floor(Math.random() * botStore.length)
    let tries = 0
+let chances = 10
    
         function submit() {
             Object.entries(listo).forEach(([key, value]) => {
@@ -57,7 +58,7 @@ botAsk.innerHTML = botStore[valula]
 function incorrect() {
 tries++
 triesHome.innerHTML = "Tries: " + tries
- botStore = []
+
 Object.entries(listo).forEach(([key, value]) => {
         if (value >= 2) {
             value--
@@ -77,7 +78,7 @@ botAsk.innerHTML = botStore[valula]
 function correct() {
     tries++
     triesHome.innerHTML = "Tries: " + tries
-           botStore = []
+           
     Object.entries(listo).forEach(([key, value]) => {
         if (key == botStore[valula]) {
             listo[key]++
