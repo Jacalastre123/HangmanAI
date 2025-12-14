@@ -30,3 +30,5 @@ let listo = {
 
 let botStore = [
 ]
+
+let done = []
