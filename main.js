@@ -83,7 +83,7 @@ function correct() {
             listo[key]++
             done.push(key)
         }
-            for (let i3 = 0; i3 < value; i3++) {
+            for (let i3 = 0; i3 < listo[key]; i3++) {
          
                 botStore.push(key)
             }
@@ -92,9 +92,6 @@ function correct() {
    
         valula = Math.floor(Math.random() * botStore.length)
   
-      if (item == botStore[valula]) {
-         valula = Math.floor(Math.random() * botStore.length)
-      }
 do {
    valula = Math.floor(Math.random() * botStore.length)
    
