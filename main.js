@@ -10,6 +10,7 @@
             Object.entries(listo).forEach(([key, value]) => {
             for (let ii = 0; ii < value; ii++) {
                 botStore.push(key)
+               
             }
              })
             for (let i = 0; i < count.value; i++) {
@@ -79,7 +80,7 @@ function correct() {
            botStore = []
     Object.entries(listo).forEach(([key, value]) => {
         if (key == botStore[valula]) {
-            value++
+            listo[key]++
             done.push(key)
         }
             for (let i3 = 0; i3 < value; i3++) {
@@ -90,12 +91,16 @@ function correct() {
         })
    
         valula = Math.floor(Math.random() * botStore.length)
-   done.forEach((item) => {
+  
       if (item == botStore[valula]) {
          valula = Math.floor(Math.random() * botStore.length)
       }
-   })
-botAsk.innerHTML = botStore[valula]
+do {
+   valula = Math.floor(Math.random() * botStore.length)
+   
+ 
+} while (done.includes(botStore[valula]))
+  botAsk.innerHTML = botStore[valula]
 
 
 }
