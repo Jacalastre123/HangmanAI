@@ -41,7 +41,7 @@
        
 
 valula = Math.floor(Math.random() * botStore.length)
-             done.forEach((item) => {
+      done.forEach((item) => {
       if (item == botStore[valula]) {
          valula = Math.floor(Math.random() * botStore.length)
       }
