@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="google-site-verification" content="rBEhW9MugYE6g84ujeJ4sbt90DhMpjkgjt4nfNBnT8M" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <h1>Hangman</h1>
+    <h2>The game of Hangman with (a slightly dumb)AI</h2>
+    <div class="container">
+    <h5 id="triesHome"></h5>
+    <h4 id="botAsk">Bot Here</h4>
+    <form>
+        <label for="count">Amount of letters:</label><br>
+        <input type="number" id="count" placeholder="Letters in your Word">
+    </form>
+
+    <button onclick="submit()" class="sub">Submit</button>
+    <br><br>
+    <button onclick="correct()" class="cor">Correct</button>
+    <button onclick="incorrect()" class="inc">Incorrect</button>
+    <br>
+    <div id="wordCont"></div>
+    <dialog id="victor">
+        <h4>You won!</h4>
+        <h5>Your spectacular (Slightly Dumb) and personal AI has successfully guess your word, isn't that great?</h5>
+        <button onclick="victor.close()">Close</button>
+    </dialog>
+    </div>
+    <script src="store.js"></script>
+    <script src="main.js"> </script>
+
+</body>
+</html>
