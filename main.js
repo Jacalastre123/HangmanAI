@@ -41,6 +41,11 @@
        
 
 valula = Math.floor(Math.random() * botStore.length)
+             done.forEach((item) => {
+      if (item == botStore[valula]) {
+         valula = Math.floor(Math.random() * botStore.length)
+      }
+   }
 botAsk.innerHTML = botStore[valula]
 
 
@@ -75,6 +80,7 @@ function correct() {
     Object.entries(listo).forEach(([key, value]) => {
         if (key == botStore[valula]) {
             value++
+            done.push(key)
         }
             for (let i3 = 0; i3 < value; i3++) {
          
@@ -82,8 +88,13 @@ function correct() {
             }
            
         })
-
+   
         valula = Math.floor(Math.random() * botStore.length)
+   done.forEach((item) => {
+      if (item == botStore[valula]) {
+         valula = Math.floor(Math.random() * botStore.length)
+      }
+   }
 botAsk.innerHTML = botStore[valula]
 
 
